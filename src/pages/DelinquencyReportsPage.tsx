@@ -13,11 +13,11 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search, FileText } from "lucide-react";
-import { mockInspectionsData } from "@/data/mockData";
+import { mockInspections } from "@/data/mockData";
 import { format } from "date-fns";
 
 // Only show inspections that have infractions
-const inspectionsWithInfractions = mockInspectionsData.filter(
+const inspectionsWithInfractions = mockInspections.filter(
   (inspection) => inspection.hasInfractions
 );
 

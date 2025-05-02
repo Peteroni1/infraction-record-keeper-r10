@@ -4,7 +4,7 @@ import { Calendar } from "@/components/ui/calendar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
-import { mockInspectionsData } from "@/data/mockData";
+import { mockInspections } from "@/data/mockData";
 import { format } from "date-fns";
 
 const InspectionCalendarPage = () => {
@@ -12,7 +12,7 @@ const InspectionCalendarPage = () => {
   
   // Find inspections for the selected date
   const inspectionsForSelectedDate = date 
-    ? mockInspectionsData.filter(inspection => {
+    ? mockInspections.filter(inspection => {
         const inspectionDate = new Date(inspection.date);
         return (
           inspectionDate.getDate() === date.getDate() &&
@@ -23,7 +23,7 @@ const InspectionCalendarPage = () => {
     : [];
 
   // Get dates that have inspections for highlighting in calendar
-  const inspectionDates = mockInspectionsData.map(inspection => new Date(inspection.date));
+  const inspectionDates = mockInspections.map(inspection => new Date(inspection.date));
 
   return (
     <AppLayout>

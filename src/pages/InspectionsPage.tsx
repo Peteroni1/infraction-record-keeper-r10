@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { mockInspectionsData } from "@/data/mockData";
+import { mockInspections } from "@/data/mockData";
 import { format } from "date-fns";
 import { Search } from "lucide-react";
 
@@ -59,7 +59,7 @@ const InspectionsPage = () => {
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {mockInspectionsData.map((inspection) => (
+                  {mockInspections.map((inspection) => (
                     <TableRow key={inspection.id}>
                       <TableCell>{format(new Date(inspection.date), "MMM d, yyyy")}</TableCell>
                       <TableCell>{inspection.type}</TableCell>
